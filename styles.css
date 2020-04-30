@@ -42,6 +42,17 @@ header {
   z-index: 500;
 }
 
+.title-content-wrapper {
+  max-height: 50vh; 
+  overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .title-content-wrapper {
+    max-height: 250px;
+  }
+}
+
 header > h1 {
   margin: 0 0 1.2rem 0;
 }
@@ -58,6 +69,12 @@ details p {
 
 details p:last-of-type {
   margin-bottom: 0;
+}
+
+/* marker cluster override */
+.marker-cluster-small div {
+  background-color: #ff8c1a !important;
+  opacity: 0.6;
 }
 
 @media (max-width: 640px) {
@@ -95,6 +112,13 @@ a:hover {
   color: #d01c8b;
 }
 
+.color-ocurring {
+  color: #1772aa;
+}
+
+.color-may-be-ocurring {
+  color: #ae5117;
+}
 /* popup styling */
 
 /* override leaflet's <p> element styles */
@@ -148,6 +172,7 @@ a:hover {
   white-space: nowrap;
 }
 
+
 /* Hide map layers controls on mobile for now, as they get obscured */
 @media (max-width: 640px) {
   #root.aemp-popupopen .leaflet-control-attribution {
@@ -186,7 +211,7 @@ a:hover {
 }
 
 .aemp-infowindow p.infowindow-title {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 a.aemp-infowindow-close {
